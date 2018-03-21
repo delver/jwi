@@ -445,7 +445,7 @@ public class RAMDictionary implements IRAMDictionary {
 				return;
 			
 			// if we are already closing, do nothing
-			if(state != LifecycleState.CLOSING)
+			if(state == LifecycleState.CLOSING)
 				return;
 			
 			state = LifecycleState.CLOSING;
